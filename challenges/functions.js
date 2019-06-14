@@ -6,19 +6,48 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
+function consume(firstName, color, cb) {
+  return cb(firstName, color);
+}
+const intro = function(firstName, color) {
+  return `${firstName}'s favorite color is ${color}`;
+}
 
-
+console.log(consume("Alexis", "blue", intro));
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+//Add
+function consume(num1, num2, cb) {
+  return cb(num1, num2);
+}
+const add = function(num1, num2) {
+  return num1 + num2;
+}
+
+//Multiply
+function consume(num1, num2, cb) {
+  return cb(num1, num2);
+}
+const multiply = function(num1, num2) {
+  return num1 * num2;
+}
+
+//Greeting
+function consume(firstName, lastName, cb) {
+  return cb(firstName, lastName);
+}
+const greeting = function(firstName, lastName) {
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
+}
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2,2,add)); // 4
+console.log(consume(10,16,multiply)); // 160
+console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -26,7 +55,7 @@
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-
+They are all inside the same kingdom. Meaning they are all inside the curly brackets of function myFunction().
 
 const external = "I'm outside the function";
 

@@ -9,7 +9,7 @@ function CuboidMaker(attributes) {
   this.length = attributes.length;
   this.width = attributes.width;
   this.height = attributes.height;
-  this.values = attributes.values
+  this.values = attributes.values;
 
 }
 
