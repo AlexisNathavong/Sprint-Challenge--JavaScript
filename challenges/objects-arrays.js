@@ -13,7 +13,9 @@ const tyrannosaurus = {
   "weight": '7000kg',
   "length": '12m',
   "period": 'Late Cretaceous',
-  "roar": 'RAWERSRARARWERSARARARRRR!'
+  "roar": function() {
+    return 'RAWERSRARARWERSARARARRRR!'
+  }
 }
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const stegosaurus = {
@@ -47,7 +49,7 @@ console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(tyrannosaurus.roar);
+console.log(tyrannosaurus.roar());
 
 
 // ==== Arrays ====
@@ -93,7 +95,7 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-// const uni = [];
+const uni = [];
 
 // // for (i = 0; i < graduates.length; i++) {
 // //   graduates[i].university;
@@ -103,13 +105,14 @@ console.log(contactInfo);
 
 // // console.log(uni);
 
-// for (i = 0; i < graduates.length; i++) {
-//   graduates[i].university;
-//   if (university === 'Uni')
-//     uni.push(graduates[i].university);
-// }
+for (i = 0; i < graduates.length; i++) {
+  let university = graduates[i].university;
+  if (university.includes('Uni')) {
+    uni.push(graduates[i].university);
+  }
+}
 
-// console.log(uni[i]);
+console.log(uni[i]);
 
 
 // ==== ADVANCED Array Methods ====

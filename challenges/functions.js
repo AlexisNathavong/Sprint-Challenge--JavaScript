@@ -20,25 +20,16 @@ console.log(consume("Alexis", "blue", intro));
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 //Add
-function consume(num1, num2, cb) {
-  return cb(num1, num2);
-}
 const add = function(num1, num2) {
   return num1 + num2;
 }
 
 //Multiply
-function consume(num1, num2, cb) {
-  return cb(num1, num2);
-}
 const multiply = function(num1, num2) {
   return num1 * num2;
 }
 
 //Greeting
-function consume(firstName, lastName, cb) {
-  return cb(firstName, lastName);
-}
 const greeting = function(firstName, lastName) {
   return `Hello ${firstName} ${lastName}, nice to meet you!`;
 }
